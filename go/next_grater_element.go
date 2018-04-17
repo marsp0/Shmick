@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func nextGreaterElement(findNums []int, nums []int) []int {
 	var result []int
 	var flag bool
@@ -26,10 +24,4 @@ func nextGreaterElement(findNums []int, nums []int) []int {
 		}
 	}
 	return result
-}
-
-func main() {
-	var arr1 = []int{4, 1, 2}
-	var arr2 = []int{1, 3, 4, 2}
-	fmt.Println(nextGreaterElement(arr1, arr2))
 }
