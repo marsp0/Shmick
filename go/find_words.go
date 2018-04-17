@@ -1,6 +1,5 @@
 package main
 
-import "fmt"
 import "strings"
 
 func findWords(words []string) []string {
@@ -36,11 +35,11 @@ func findWords(words []string) []string {
 	var flag bool
 	for i := 0; i < len(words); i++ {
 		var stringer = strings.ToLower(words[i][0:1])
-		var current_word = strings.ToLower(words[i])
-		var current_row = dict[stringer]
+		var currentWord = strings.ToLower(words[i])
+		var currentRow = dict[stringer]
 		flag = true
 		for j := 1; j < len(words[i]); j++ {
-			if dict[current_word[j:j+1]] != current_row {
+			if dict[currentWord[j:j+1]] != currentRow {
 				flag = false
 				break
 			}
@@ -50,9 +49,4 @@ func findWords(words []string) []string {
 		}
 	}
 	return result
-}
-
-func main() {
-	var temp = [4]string{"Hello", "Alaska", "Dad", "Peace"}
-	fmt.Println(findWords(temp[:]))
 }

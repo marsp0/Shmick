@@ -1,6 +1,5 @@
 package main
 
-import "fmt"
 import "strconv"
 
 func fizzBuzz(n int) []string {
@@ -17,8 +16,4 @@ func fizzBuzz(n int) []string {
 		}
 	}
 	return result
-}
-
-func main() {
-	fmt.Println(fizzBuzz(15))
 }

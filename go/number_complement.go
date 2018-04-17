@@ -1,6 +1,5 @@
 package main
 
-import "fmt"
 import "strconv"
 
 func findComplement(num int) int {
@@ -16,8 +15,4 @@ func findComplement(num int) int {
 	var i, _ = strconv.ParseInt(result, 2, 32)
 	var p = int(i)
 	return p
-}
-
-func main() {
-	fmt.Println(findComplement(5))
 }
