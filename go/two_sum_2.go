@@ -26,7 +26,7 @@ func twoSumNaive(numbers []int, target int) []int {
 	return toReturn
 }
 
-func twoSum(numbers []int, target int) []int {
+func twoSum2(numbers []int, target int) []int {
 	var toReturn = []int{}
 	for i := 0; i < len(numbers); i++ {
 		var toFind = target - numbers[i]
