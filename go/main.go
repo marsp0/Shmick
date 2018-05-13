@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(findLengthOfLCIS([]int{2, 2, 2, 2}))
+	fmt.Println(dominantIndex([]int{1, 2, 3, 4}))
 }
