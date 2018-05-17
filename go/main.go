@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(licenseKeyFormatting("---", 2))
+	fmt.Println(repeatedSubstringPattern("abcabcabcabc"))
 }
