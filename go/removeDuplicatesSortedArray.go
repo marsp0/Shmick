@@ -1,31 +1,23 @@
 package main
 
 func removeDuplicates(nums []int) int {
+	// https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 	var (
-		lastAvailableIndex = len(nums) - 1
-		i                  = 1
-		j                  int
-		current            int
+		newArray = []int{}
 	)
-	if len(nums) >= 1 {
-		current = nums[0]
-	} else {
+	if len(nums) == 0 {
 		return 0
+	} else if len(nums) == 1 {
+		return 1
 	}
-	for i < len(nums) && lastAvailableIndex > i {
-		if nums[i] != current {
-			current = nums[i]
-		} else {
-			nums[i], nums[lastAvailableIndex] = nums[lastAvailableIndex], nums[i]
-			j = lastAvailableIndex - 1
-			for nums[j] == nums[i] && j >= i {
-				// fmt.Println("ds")
-				j--
-
-			}
-			lastAvailableIndex = j
+	newArray = append(newArray, nums[0])
+	for i := 1; i < len(nums); i++ {
+		if nums[i] != newArray[len(newArray)-1] {
+			newArray = append(newArray, nums[i])
 		}
-		i++
 	}
-	return lastAvailableIndex + 1
+	for index, value := range newArray {
+		nums[index] = value
+	}
+	return len(newArray)
 }

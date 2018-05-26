@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fmt.Println(removeDuplicates([]int{1, 1, 2}))
+	fmt.Println(isPalindrome(-121))
 }
